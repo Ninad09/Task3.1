@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face{
+    font-family: 'Tungsten-Bold';
+    src: url(fonts/Tungsten-Bold/Tungsten-Bold.ttf);
+}
+
+.header{
+    background-color: #111111;
+    height: 100px;
+    width: auto;
+    margin: auto;
+    color: white;
+    font-family: 'Tungsten-Bold';
+    font-size: 50px;
+    text-align: center;
+
+}
+
+.container{
+    background-color: #ece8e1;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}
+
+/* .riotbutton{
+    background-color: #ff4655;
+} */
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100% ;
+    justify-content: center;
+    align-items: center;
+}
+
+.item{
+    margin: 10px;
+    min-width: 500px;
+    min-height: 400px;
+}
+
+.row .sidebox{
+    min-width: 0px;
+    min-height: 0px;
+}
+
+.row .sidebox-text{
+
+    font-family: 'Tungsten-Bold';
+    font-size: 80px;
+    color: #111111;
+    text-align: center;
+}

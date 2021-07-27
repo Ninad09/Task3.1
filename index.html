@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <title>Task3.1</title>
+</head>
+<body>
+
+    <div class="header">
+      <!-- <p>iframe</p> -->
+    </div>
+    <div class="container">
+
+        <div id="row1" class="row">
+            <iframe id="SOVA" class="item" src="https://www.youtube.com/embed/OZ76UP-c8Ao" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div id="row2" class="row">
+            <div id="aname" class="sidebox-text" style="width: 0px; height: 0px;"></div>
+            <iframe id="SAGE" class="item" src="https://www.youtube.com/embed/1aRwM_QsqQI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe id="PHOENIX" class="item" src="https://www.youtube.com/embed/ttJMFW2wUQM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <img id="OP" class="sidebox" src="images/tp.png" alt="" width="0px"> 
+          </div>
+
+        <div id="row3" class="row">
+            <iframe id="RAZE" class="item" src="https://www.youtube.com/embed/2-uAL__pp_U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe id="REYNA" class="item" src="https://www.youtube.com/embed/IzsQNYrq9AM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe id="BREACH" class="item" src="https://www.youtube.com/embed/Rux0HjzKQbw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+    <script>
+
+      var parent1 = document.querySelector("#row1");
+      var parent2 = document.querySelector("#row2");
+      var parent3 = document.querySelector("#row3");
+
+      parent1.addEventListener("mouseover", doSomething);
+      parent2.addEventListener("mouseover", doSomething);
+      parent3.addEventListener("mouseover", doSomething);
+
+      var image = document.getElementById('OP');
+      var text = document.getElementById('aname');
+      
+      var maxHeight = 400;
+      var maxWidth = 260;
+
+      function doSomething(e) {
+          
+        if (e.target !== e.currentTarget) {
+        var clickedItem = e.target.id;
+        // console.log(clickedItem)
+        
+          if (clickedItem == 'OP' || clickedItem == 'aname') {
+            console.log('Id OP')
+
+          } else {
+            var source = 'images/' + clickedItem + '.png'
+            image.src = source;
+            image.height = maxHeight;
+            image.width = maxWidth;
+
+            text.innerHTML = clickedItem;
+
+            text.setAttribute("style", "width: 260px");
+
+          }
+
+        }
+        // console.log(e.target)
+        e.stopPropagation();
+      }
+
+    </script>      
+
+
+        
+
+    </div>
+</body>
+</html>
